@@ -1,0 +1,53 @@
+<!doctype html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title th:text="${title}">Base html</title>
+</head>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<body>
+<!--start nav bar-->
+<nav class=" fixed-top navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Smart Contact Manager</a>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-uppercase">
+            <li class="nav-item active">
+                <a class="nav-link" href="/Contact/index" >Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" tabindex="-1">Tahesin Yusuf Khatik </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--end nav bar-->
+<!--sidebar-->
+<div class="sidebar mt-5">
+    
+    <a href="/Contact/index" class="item">Home</a>
+    <a href="/Contact/show-contacts/" class="item">View Contact</a>
+    <a href="/Contact/add-contact/" class="item">Add Contact</a>
+    <a href="/" class="item">Home Page</a>
+    <div class="divider"></div>
+</div>
+<!--end sidebar-->
+<!--content area-->
+<div class="content mt-2">
+   
+</div>
+<!--end content-->
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>
